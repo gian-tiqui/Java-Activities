@@ -1,4 +1,3 @@
-import class_reviewer.Inheritance;
 
 public class Main {
 
