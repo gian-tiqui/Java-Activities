@@ -1,10 +1,10 @@
-import idk.MathMagic;
+import class_reviewer.Inheritance;
 
-public class Main extends MathMagic {
+public class Main {
 
     public static void main(String[] args) {
 
-        play();
+
     }
 
 }
