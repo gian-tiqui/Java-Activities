@@ -1,16 +1,15 @@
-import class_reviewer.WhatIsThis;
+import data_structures.Graphm;
 
-public class Main implements WhatIsThis {
+public class Main {
 
     public static void main(String[] args) {
 
-        Main main = new Main();
+        Graphm graphm = new Graphm();
 
-        main.helloWorld("print");
-    }
+        graphm.setDefault();
 
-    @Override
-    public void helloWorld(String word) {
-        System.out.println(word);
+        graphm.printGraph();
+
+        graphm.dfsIteration(graphm.getGraph(), 1);
     }
 }
