@@ -1,15 +1,20 @@
-import data_structures.Graphm;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Graphm graphm = new Graphm();
+        for (int i = 1; i <= 100; i++) {
+            String string = i + "%";
 
-        graphm.setDefault();
+            System.out.println(string);
 
-        graphm.printGraph();
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
-        graphm.dfsIteration(graphm.getGraph(), 1);
+        System.out.print("meow");
     }
 }
