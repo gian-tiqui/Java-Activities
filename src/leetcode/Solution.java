@@ -1,5 +1,6 @@
 package leetcode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -57,5 +58,12 @@ public class Solution {
         }
 
         return map.get('u').equals(map.get('d')) && map.get('l').equals(map.get('r'));
+    }
+
+    public static ArrayList<String> getPermutation(String string) {
+
+        ArrayList<String> permutation = new ArrayList<>();
+
+        return new ArrayList<>();
     }
 }
