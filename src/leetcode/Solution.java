@@ -1,11 +1,12 @@
 package leetcode;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class Solution {
 
-    public int removeElement(int[] nums, int val) {
+    public static int removeElement(int[] nums, int val) {
         int i = 0;
         int j = 0;
 
@@ -20,7 +21,7 @@ public class Solution {
         return j;
     }
 
-    public int strStr(String haystack, String needle) {
+    public static int strStr(String haystack, String needle) {
 
         if (needle.length() == 1) {
             for (int i = 0; i < haystack.length(); i++) {
@@ -40,6 +41,21 @@ public class Solution {
         }
 
         return -1;
+    }
 
+    public static boolean robotReturnOrigin(String moves) {
+        if (moves.isEmpty())
+            return true;
+
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (char c : moves.toLowerCase().toCharArray()) {
+            if (map.containsKey(c))
+                map.put(c, map.get(c) + 1);
+            else
+                map.put(c, 1);
+        }
+
+        return map.get('u').equals(map.get('d')) && map.get('l').equals(map.get('r'));
     }
 }
