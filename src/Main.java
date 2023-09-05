@@ -9,7 +9,7 @@ public class Main {
 
         Block genesis = new Block(
                 0,
-                new String[] {"a sent b 10 bitcoins", "b sent c 5 bitcoins"}
+                new String[] {"1st transaction", "2nd transaction"}
         );
 
         Blockchain blockchain = new Blockchain(genesis);
@@ -17,7 +17,7 @@ public class Main {
         blockchain.addBlock(
                 new Block(
                         genesis.getBlockHash(),
-                        new String[] {"2nd transaction"}
+                        new String[] {"1nd transaction"}
                 )
         );
 
