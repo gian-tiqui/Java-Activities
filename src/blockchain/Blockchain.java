@@ -11,9 +11,15 @@ public class Blockchain {
 
     }
 
-    public Blockchain(Block genesis, ArrayList<Block> blockchain) {
+    public Blockchain(Block genesis) {
         this.genesis = genesis;
-        this.blockchain = blockchain;
+        this.blockchain = new ArrayList<>();
+
+        this.blockchain.add(genesis);
+    }
+
+    public void addBlock(Block block) {
+        this.blockchain.add(block);
     }
 
     public void getEachHashCode() {
@@ -59,11 +65,4 @@ public class Blockchain {
         System.out.println("block 3 hash: " + block3.getBlockHash());
     }
 
-    public void proofOfWork() {
-
-    }
-
-    public void proofOfStake() {
-
-    }
 }

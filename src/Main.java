@@ -12,11 +12,14 @@ public class Main {
                 new String[] {"a sent b 10 bitcoins", "b sent c 5 bitcoins"}
         );
 
-        ArrayList<Block> bChain = new ArrayList<>();
+        Blockchain blockchain = new Blockchain(genesis);
 
-        bChain.add(genesis);
-
-        Blockchain blockchain = new Blockchain(genesis, bChain);
+        blockchain.addBlock(
+                new Block(
+                        genesis.getBlockHash(),
+                        new String[] {"2nd transaction"}
+                )
+        );
 
         blockchain.getEachHashCode();
     }
