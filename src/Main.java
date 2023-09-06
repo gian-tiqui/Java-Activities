@@ -1,10 +1,12 @@
-import lambda.Lambda;
+import stream.Streamm;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Lambda lambda = new Lambda();
+        Streamm streamm = new Streamm();
+
+        System.out.println(streamm.findDuplicate());
     }
 
 }
