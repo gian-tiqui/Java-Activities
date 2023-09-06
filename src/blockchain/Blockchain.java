@@ -65,4 +65,23 @@ public class Blockchain {
         System.out.println("block 3 hash: " + block3.getBlockHash());
     }
 
+    public void useDefault2() {
+
+        Block genesis = new Block(
+                0,
+                new String[] {"1st transaction", "2nd transaction"}
+        );
+
+        Blockchain blockchain = new Blockchain(genesis);
+
+        blockchain.addBlock(
+                new Block(
+                        genesis.getBlockHash(),
+                        new String[] {"1nd transaction"}
+                )
+        );
+
+        blockchain.getEachHashCode();
+    }
+
 }
